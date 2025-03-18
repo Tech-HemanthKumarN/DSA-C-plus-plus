@@ -1,21 +1,21 @@
 // #include<iostream>
 // using namespace std;
 
-// void printmyname(int n)  //THIS IS FORMAL PARAMETER //THIS ARE CALLED FUCTION
+// void printmyname(int n)  //THIS IS FORMAL PARAMETER //THIS ARE CALLED FUCTION//funtion defination
 // {
 //     for(int i=0; i<n; i++)
 //     {
 //         cout<<"ARYA"<<endl;
 //     }
 //     // cout<<"ARYA"<<endl;
-// }
-// int main()
+// }//-->function end here
+// int main()//code always execute from here
 // {
 //     int n;
 //     cout<<"Enter the value for n:"<<endl;
 //     cin>>n;
 //     //function use-->function call 
-//     printmyname(n); // THIS IS ACTUALL PARAMETER //THIS ARE CALLING FUNCTION
+//     printmyname(n); // THIS IS ACTUALL PARAMETER //THIS ARE CALLING FUNCTION//function declartion
 
 //     return 0;
 // }
@@ -100,7 +100,7 @@
 // {
 //     for(int i=0; i<=10; i++)
 //     {
-//         cout<<n*i<<" ";
+//         cout<<n<<"*"<<i<<"="<<n*i<<endl;
 //     }
 // }
 // int main()
@@ -165,7 +165,7 @@
 // #include<iostream>
 // using namespace std;
 
-// void printeveninsidetherange(int start,int end)
+// void printeveninsidetherange(int start,int end)//function definaton
 // {
 //     for(int i=start;i<=end;i++)
 //     {
@@ -180,7 +180,7 @@
 
 // int main()
 // {
-//     printeveninsidetherange(101,123);
+//     printeveninsidetherange(101,123);//function declartion
 //     return 0;
 // }
 
@@ -202,4 +202,4 @@
 //     cout<<result<<endl;
 //     return 0;
 // }
-//
+//_________________________________________________________________________________________________________

@@ -9,7 +9,7 @@
 
 //     //2D array intializtion
     
-//     int arr1[3][2]=
+//     int arr1[3][2] =
 //     {
 //         {10,20},
 //         {30,40},
@@ -130,7 +130,7 @@
 // int main()
 // {
 //     int arr[3][3]={
-//         {10,20,/ 30},
+//         {10,20,30},
 //         {40,50,60},
 //         {70,80,90}
 //         };
@@ -282,6 +282,52 @@
 //     }
 
             
+//     return 0;
+// }
+//________________________________0R________________________________________________________________________________
+// #include<iostream>
+// using namespace std;
+// bool findtargetin2Darray(int arr[][3],int rowsize,int colsize,int target)
+// {
+//     for(int i=0; i<rowsize; i++)
+//     {
+//         for(int j=0; j<colsize; j++)
+//         {
+//             if(arr[i][j] == target)
+//             {
+//                 return true;
+//             }
+//         }
+//     }
+//     return false;
+// }
+// int main()
+// {
+//     int arr[3][3];
+//     int rowsize=3;
+//     int colsize=3;
+//     for(int i=0; i<rowsize; i++)
+//     {
+//         for(int j=0; j<colsize; j++)
+//         {
+//             cout<<"Enter the value for row and column:"<<"("<<i<<","<<j<<"):";
+//             cin>>arr[i][j];
+//         }
+//     }
+
+//     int target;
+//     cout<<"Enter the target value:"<<endl;
+//     cin>>target;
+
+//     int ans = findtargetin2Darray(arr,rowsize,colsize,target);
+//     if(ans == true)
+//     {
+//         cout<<"Target found:"<<endl;
+//     }
+//     else
+//     {
+//         cout<<"Target not found: "<<endl;
+//     }
 //     return 0;
 // }
 //____________________________________________________________________________________________________________
@@ -648,3 +694,31 @@
 //     return 0;
 // }
 //__________________________________________________________________________________________________________
+// #include<iostream>
+// using namespace std;
+// int sumofrow(int arr[][4],int rowSize,int colSize)
+// {
+//     for(int r=0; r<rowSize; r++)
+//     {
+//         int sum=0;
+//         for(int c=0; c<colSize; c++)
+//         {
+//             sum = sum + arr[r][c];
+//         }
+//         cout<<sum<<endl;
+//     }
+    
+// }
+// int main()
+// {
+//     int arr[3][4]=
+//     {             {10,10,10,10},
+//                   {20,20,20,20},
+//                   {30,30,30,30}
+//     };
+//         int rowSize=3;
+//         int colSize=4;
+//     int ans = sumofrow(arr,rowSize,colSize);                  
+//     cout<< ans <<endl;
+//     return 0;
+// }

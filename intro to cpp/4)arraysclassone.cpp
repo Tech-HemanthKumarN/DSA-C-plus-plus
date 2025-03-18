@@ -16,9 +16,14 @@
 // {
 //     int arr[ ]={10,20,30,40,50};
 //     fill(arr,arr+5, 6);
-//     cout<<arr[0]<<" "<<arr[1]<<" "<<arr[2]<<" "<<arr[3]<<" "<<arr[4]<<endl;
+//     // cout<<arr[0]<<" "<<arr[1]<<" "<<arr[2]<<" "<<arr[3]<<" "<<arr[4]<<endl;
+//     for(int i=0; i<=5; i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     }
 //     return 0;
 // }
+
 //___________________________________________________________________________________________________
 //TAKING INPUT FOR ARRAY
  
@@ -40,7 +45,7 @@
 //     }
 //     return 0;
 // }
-//_______________________________________________________________________________________________________
+// _______________________________________________________________________________________________________
 //USING PASS BY REFRENCE
 
 // #include<iostream>
@@ -57,9 +62,8 @@
 //     cout<<arr[0]<<" "<<arr[1]<<" "<<arr[2]<<" "<<arr[3]<<" "<<arr[4];
 //     return  0;
 // }
-
 // _____________________________________________________________________________________________________
-//ARAY IS A PASS BY REFERENCE
+//ARAY IS A PASS BY REFERENCE....-->imp
 
 // #include<iostream>
 // using namespace std;
@@ -82,6 +86,35 @@
 //         cout<<arr[i]<<" ";
 //     }
     
+//     return 0;
+// }
+//__________________OR_________________________________________________________________
+// #include<iostream>
+// using namespace std;
+// void vector(int num[], int n )
+// {
+//     for(int i=0; i<n; i++)
+//     {
+//         num[i]=num[i]+10;
+//     }
+//     return;
+// }
+// int main()
+// {
+//     int arr[100];
+//     int size;
+//     cout<<"Enter the size:"<<endl;
+//     cin>>size;
+//     for(int i=0; i<size; i++)
+//     {
+//         cout<<"Entert the elements:"<<i<<endl;
+//         cin>>arr[i];
+//     }
+//     vector(arr,size);
+//     for(int i=0; i<size; i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     }
 //     return 0;
 // }
 //_______________________________________________________________________________________________________
@@ -140,7 +173,7 @@
 //     for(int i=0; i<size; i++)
 //     {
 //         cout<<"Enter the element"<<i<<endl;
-//         cin>>size;
+//         cin>>arr[i];
 //     }
 
 //     int target;
@@ -370,32 +403,127 @@
 //__________________________________________________________________________________________________________
 //REVERS AN ARRAY
 
-#include<iostream>
-#include<algorithm>
-using namespace std;
-void revers(int arr[], int n)
-{
-    int l=0; 
-    int h=n-1;
+// #include<iostream>
+// #include<algorithm>
+// using namespace std;
+// void revers(int arr[], int n)
+// {
+//     int l=0; 
+//     int h=n-1;
 
-    while(l < h)
-    {
-        swap(arr[l],arr[h]); //-->or--> swap(arr[l++],arr[h--]);
-        l++;
-        h--;
-    }
-}
-int main()
-{
-    int arr[5]={10,20,30,40,50};
-    int n=sizeof(arr)/sizeof(arr[0]);
-    // revers(arr,n); //method 1 long method
-    // cout<<arr[0]<<" "<<arr[1]<<" "<<arr[2]<<" "<<arr[3]<<" "<<arr[4]<<endl;
-    revers(arr,n);//method 2 short method
-    for(int i=0; i<n; i++)
-    {
-        cout<<arr[i]<<endl;
-    }
-    return 0;
-}
+//     while(l < h)
+//     {
+//         swap(arr[l],arr[h]); //-->or--> swap(arr[l++],arr[h--]);
+//         l++;
+//         h--;
+//     }
+// }
+// int main()
+// {
+//     int arr[5]={10,20,30,40,50};
+//     int n=sizeof(arr)/sizeof(arr[0]);
+//     // revers(arr,n); //method 1 long method
+//     // cout<<arr[0]<<" "<<arr[1]<<" "<<arr[2]<<" "<<arr[3]<<" "<<arr[4]<<endl;
+//     revers(arr,n);//method 2 short method
+//     for(int i=0; i<n; i++)
+//     {
+//         cout<<arr[i]<<endl;
+//     }
+//     return 0;
+// }
 // HOME WORK IS OVER
+// ____________________________________________________
+// #include<iostream>
+// using namespace std;
+// bool findtarget(int arr[],int size, int target)
+// {
+//     for(int i=0; i<size; i++)
+//     {
+//         if(arr[i]==target)
+//         {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+// int main()
+// {
+//     int arr[100];
+//     int n;
+//     cout<<"Enetr the number of size:"<<endl;
+//     cin>>n;
+//     for(int i=0; i<n; i++)
+//     {
+//         cout<<"Enter the number of elements:"<<i<<endl;
+//         cin>>arr[i];
+//     }
+//     int target;
+//     cout<<"Enter your target:"<<endl;
+//     cin>>target;
+//     int result=findtarget(arr,n,target);
+//     if(result==true)
+//     {
+//         cout<<"Target Found"<<endl;
+//     }
+//     else
+//     {
+//         cout<<"Targert not found"<<endl;
+//     }
+//     return 0;
+// }
+// ______________________________________________
+// #include<iostream>
+// #include<limits.h>
+// using namespace std;
+// int findmin(int arr[],int size)
+// {
+//     int minans=INT_MAX;
+//     for(int i=0; i<size; i++)
+//     {
+//         minans=min(minans,arr[i]);
+//     }
+//     return minans;
+// }
+//  int main()
+//  {
+//     int arr[100];
+//     int n;
+//     cout<<"Enter the size:"<<endl;
+//     cin>>n;
+//     for(int i=0; i<n; i++)
+//     {
+//         cout<<"Enter the number of elements:"<<endl;
+//         cin>>arr[i];
+//     }
+//     cout<<"Minans is:"<<findmin(arr,n)<<endl;
+//     return 0;
+//  }
+// 
+// #include<iostream>
+// using namespace std;
+// void fun(int arr[], int n)
+// {
+//     for(int i=0; i<n; i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cout<<"enter the size of array:"<<endl;
+//     cin>>n;
+//     // dynamicaly declared
+//     int*arr=new int[n];
+//     cout<<"Enter the array elements:"<<endl;
+//    for(int i=0; i<n; i++)
+//    {
+//     int data;
+//     cin>>data;
+//     arr[i]=data;
+//    }
+//    cout<<"Array elements are:"<<endl;
+//    fun(arr,n);
+//     return 0;
+// }
+// __________________________________________________________

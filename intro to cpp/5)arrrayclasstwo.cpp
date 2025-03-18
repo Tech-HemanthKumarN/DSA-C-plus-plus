@@ -17,7 +17,6 @@
 //     int arr[]={10,20,30,40};
 //     int size=4;
 //     printallpaires(arr,size);
-
 //     return 0;
 // }
 //__________________________________________________________________________________________________
@@ -283,17 +282,16 @@
 //     {
 //         temp[index]=arr[i]; // temp[0] = arr[4]; now--> temp[0] = 50; 
 //         index++;// index = 1; now agin do the same thing agin
-        //for(int i = 5 ; 5 < 6; 5++)
-        //temp[1]=arr[5]; temp[1] = 60;
-        //index=2;
-        // for(int i=6; 6<6--> not true exit)
+//         // for(int i = 5 ; 5 < 6; 5++)
+//         // temp[1]=arr[5]; temp[1] = 60;
+//         // index=2;
+//         // for(int i=6; 6<6--> not true exit)
 //     }
 //     //step 2: shift array elements by finalshift places
-//     for(int i=size-1; i>=0;i--) //for(int i = 6-1; 5 > =0; 5--)
-//     {
-//         arr[i]=arr[i-finalshift]; //arr[5]=arr[5-2];-->arr[5]=arr[3]=40; in the same way-->arr[4]=arr[4-2]-->arr[4]=arr[2] = 30 || arr[3]=arr[3-2] -->arr[3]=arr[1] = 20; || arr[2]=arr[2-2]-->arr[2]=arr[0] = 10;
-
-//     }
+//     for(int i=size-1; i>=0; i--) //for(int i = 6-1; 5 > =0; 5--)
+//         {
+//            arr[i]=arr[i-finalshift]; //arr[5]=arr[5-2];-->arr[5]=arr[3]=40; in the same way-->arr[4]=arr[4-2]-->arr[4]=arr[2] = 30 || arr[3]=arr[3-2] -->arr[3]=arr[1] = 20; || arr[2]=arr[2-2]-->arr[2]=arr[0] = 10;
+//         }
 //     //step 3:copy temp elelments into original array
 //     for(int i=0; i<finalshift; i++)
 //     {
@@ -324,4 +322,52 @@
 
 //     return 0;
 //  }
-//______________________________________________________________________________________________________________
+// ______________________________________________________________________________________________________________
+#include<iostream>
+using namespace std;
+void rotatearray(int arr[],int size,int shift)
+{
+    int finalshift = shift%size;
+    if(finalshift == 0)
+    {
+        return;
+    }
+
+    int temp[1000];
+    int index=0;
+
+    for(int i=size-finalshift; i<size; i++)
+    {
+        temp[index]=arr[i];
+        index++;
+    }
+    for(int i=size-1; i>=0; i--)
+    {
+        arr[i]=arr[i-finalshift];
+    }
+    for(int i=0; i<finalshift; i++)
+    {
+        arr[i]=temp[i];
+    }
+}
+int main()
+{
+    int arr[]={10,20,30,40,50,60};
+    int size=6;
+    int shift=2;
+
+    cout<<"Before:"<<endl;
+    for(int i=0; i<size; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+
+    rotatearray(arr,size,shift);
+    cout<<"After:"<<endl;
+    for(int i=0; i<size; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
