@@ -1,3 +1,4 @@
+//Duch National Falg Prob:Two pointer Way
 #include<iostream>
 using namespace std;
 int MoveAllNegToLeft(int *a, int n){
